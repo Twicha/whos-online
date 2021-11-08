@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <link id="favicon" rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./styles/styles.min.css" />
+    <title>Who's Online | Настройки</title>
+  </head>
+  <body>
+    <div class="popup popup--exit-from-account">
+      <div class="popup__backdrop close-popup-item"></div>
+      <div class="popup-content popup-content--confirm">
+        <h3 class="popup-content__title">
+          Вы уверены, что хотите выйти из аккаунта?
+        </h3>
+        <div class="popup-content__group">
+          <button
+            class="
+              base-button base-button--small base-button--outline
+              popup-content__group-btn
+              close-popup-item
+            "
+          >
+            Нет
+          </button>
+          <button
+            class="
+              base-button base-button--small
+              popup-content__group-btn
+              close-popup-item
+            "
+          >
+            Да
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <aside class="aside-bar">
+      <nav class="aside-bar-navigation">
+        <ul class="aside-bar-navigation__list">
+          <li class="aside-bar-navigation__list-item">
+            <a href="/home.html" class="aside-bar-navigation__list-item-link">
+              <span class="aside-bar-navigation__list-item-link-container">
+                <svg
+                  class="aside-bar-navigation__list-item-icon"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="aside-bar-navigation__list-item-icon-item"
+                    d="M18.3333 6.55509L20.3883 8.47317C20.6466 8.73065 20.7778 9.04272 20.7778 9.37028C20.7778 10.0441 20.2294 10.5925 19.5556 10.5925H18.3333V17.5184C18.3333 18.6413 17.4191 19.5555 16.2963 19.5555H14.4444C13.8922 19.5555 13.4444 19.1078 13.4444 18.5555V14.6667C13.4444 13.3166 12.35 12.2222 11 12.2222C9.64997 12.2222 8.55556 13.3166 8.55556 14.6667V18.5555C8.55556 19.1078 8.10784 19.5555 7.55556 19.5555H5.7037C4.58089 19.5555 3.66667 18.6413 3.66667 17.5184V10.5925H2.44444C1.77059 10.5925 1.22222 10.0441 1.22222 9.37028C1.22222 9.04272 1.35341 8.73065 1.59133 8.49272L10.4443 0.219084C10.7572 -0.0734351 11.2428 -0.0726203 11.5565 0.219084L14.2593 2.7442V1.62953C14.2593 1.17975 14.6243 0.814714 15.0741 0.814714H17.5185C17.9683 0.814714 18.3333 1.17975 18.3333 1.62953V6.55509Z"
+                    fill="#686E78"
+                  />
+                </svg>
+                Главная
+              </span>
+            </a>
+          </li>
+          <li class="aside-bar-navigation__list-item">
+            <a
+              href="/accounts.html"
+              class="aside-bar-navigation__list-item-link"
+            >
+              <span class="aside-bar-navigation__list-item-link-container">
+                <svg
+                  class="aside-bar-navigation__list-item-icon"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="aside-bar-navigation__list-item-icon-item"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M9.89999 19.5556C9.89999 19.5556 8.55554 19.5556 8.55554 18.3333C8.55554 17.1111 9.89999 13.4445 15.2778 13.4445C20.6555 13.4445 22 17.1111 22 18.3333C22 19.5556 20.6555 19.5556 20.6555 19.5556H9.89999Z"
+                    fill="#686E78"
+                  />
+                  <path
+                    class="aside-bar-navigation__list-item-icon-item"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M15.2778 12.2222C17.6403 12.2222 19.5556 10.307 19.5556 7.94443C19.5556 5.58188 17.6403 3.66666 15.2778 3.66666C12.9152 3.66666 11 5.58188 11 7.94443C11 10.307 12.9152 12.2222 15.2778 12.2222Z"
+                    fill="#686E78"
+                  />
+                  <path
+                    class="aside-bar-navigation__list-item-icon-item"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.30286 19.5556C7.10574 19.218 6.99995 18.8178 6.99995 18.3673C6.99995 16.7566 7.95063 15.1002 9.71027 13.9469C8.94051 13.7379 8.04312 13.6142 7.00001 13.6142C1.4 13.6142 0 17.179 0 18.3673C0 19.5556 1.4 19.5556 1.4 19.5556H7.30286Z"
+                    fill="#686E78"
+                  />
+                  <path
+                    class="aside-bar-navigation__list-item-icon-item"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M6.11112 12.2222C8.13617 12.2222 9.77779 10.5806 9.77779 8.55555C9.77779 6.53051 8.13617 4.88889 6.11112 4.88889C4.08608 4.88889 2.44446 6.53051 2.44446 8.55555C2.44446 10.5806 4.08608 12.2222 6.11112 12.2222Z"
+                    fill="#686E78"
+                  />
+                </svg>
+                Аккаунты
+              </span>
+            </a>
+          </li>
+          <li class="aside-bar-navigation__list-item">
+            <a
+              href="/services.html"
+              class="aside-bar-navigation__list-item-link"
+            >
+              <span class="aside-bar-navigation__list-item-link-container">
+                <svg
+                  class="aside-bar-navigation__list-item-icon"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    class="aside-bar-navigation__list-item-icon-item"
+                    x="3.05554"
+                    y="3.66666"
+                    width="7.33333"
+                    height="7.33333"
+                    rx="2"
+                    fill="#686E78"
+                  />
+                  <rect
+                    class="aside-bar-navigation__list-item-icon-item"
+                    x="3.05554"
+                    y="12.2222"
+                    width="7.33333"
+                    height="7.33333"
+                    rx="2"
+                    fill="#686E78"
+                  />
+                  <rect
+                    class="aside-bar-navigation__list-item-icon-item"
+                    x="11.6111"
+                    y="3.66666"
+                    width="7.33333"
+                    height="7.33333"
+                    rx="2"
+                    fill="#686E78"
+                  />
+                  <path
+                    class="aside-bar-navigation__list-item-icon-item"
+                    d="M15.2778 12.2222C14.6027 12.2222 14.0555 12.7694 14.0555 13.4444V14.6666H12.8333C12.1583 14.6666 11.6111 15.2138 11.6111 15.8889C11.6111 16.5639 12.1583 17.1111 12.8333 17.1111H14.0555V18.3333C14.0555 19.0083 14.6027 19.5555 15.2778 19.5555C15.9528 19.5555 16.5 19.0083 16.5 18.3333V17.1111H17.7222C18.3972 17.1111 18.9444 16.5639 18.9444 15.8889C18.9444 15.2138 18.3972 14.6666 17.7222 14.6666H16.5V13.4444C16.5 12.7694 15.9528 12.2222 15.2778 12.2222Z"
+                    fill="#686E78"
+                  />
+                </svg>
+                Сервисы
+              </span>
+            </a>
+          </li>
+          <li
+            class="
+              aside-bar-navigation__list-item
+              aside-bar-navigation__list-item--active
+            "
+          >
+            <a
+              href="/settings.html"
+              class="aside-bar-navigation__list-item-link"
+            >
+              <span class="aside-bar-navigation__list-item-link-container">
+                <svg
+                  class="aside-bar-navigation__list-item-icon"
+                  width="22"
+                  height="22"
+                  viewBox="0 0 22 22"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    class="aside-bar-navigation__list-item-icon-item"
+                    d="M20.4392 13.143L18.5933 11.7374C18.6168 11.5207 18.6368 11.2673 18.6368 10.9992C18.6368 10.7311 18.6176 10.4777 18.5933 10.261L20.4409 8.85462C20.784 8.59062 20.8777 8.12209 20.6593 7.73182L18.7398 4.49778C18.5347 4.13276 18.0854 3.94534 17.6294 4.10912L15.4513 4.96059C15.0338 4.66725 14.5962 4.41956 14.1435 4.22156L13.8122 1.97187C13.7578 1.5449 13.3762 1.22223 12.9252 1.22223H9.07619C8.62517 1.22223 8.24448 1.5449 8.1909 1.96534L7.85873 4.2232C7.42026 4.41551 6.98936 4.65996 6.5534 4.96223L4.36949 4.10832C3.96028 3.95432 3.47079 4.12703 3.26746 4.49045L1.34547 7.72854C1.11873 8.10174 1.21243 8.58654 1.56304 8.85707L3.40889 10.2626C3.37959 10.5372 3.36539 10.776 3.36539 11C3.36539 11.2241 3.37963 11.4628 3.40889 11.7383L1.56135 13.1446C1.21827 13.4094 1.1254 13.878 1.34379 14.2674L3.2633 17.5014C3.46831 17.8656 3.91345 18.0547 4.37365 17.8901L6.55171 17.0386C6.96842 17.3312 7.40602 17.5788 7.85873 17.7776L8.19008 20.0265C8.24444 20.4551 8.62517 20.7778 9.07702 20.7778H12.926C13.3771 20.7778 13.7586 20.4551 13.8122 20.0347L14.1443 17.7776C14.5828 17.5845 15.0129 17.3409 15.4497 17.0378L17.6336 17.8917C17.739 17.9316 17.8486 17.952 17.9616 17.952C18.2862 17.952 18.585 17.7793 18.7356 17.5104L20.6634 14.2593C20.8777 13.8779 20.7839 13.4094 20.4392 13.143ZM11.0007 14.2593C9.15484 14.2593 7.65371 12.7975 7.65371 11C7.65371 9.20254 9.15484 7.74076 11.0007 7.74076C12.8465 7.74076 14.3477 9.20254 14.3477 11C14.3477 12.7975 12.8465 14.2593 11.0007 14.2593Z"
+                    fill="#686E78"
+                  />
+                </svg>
+                Настройки
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        class="
+          aside-bar-navigation__list-item
+          aside-bar-navigation__list-item--support
+        "
+      >
+        <a href="/feedback.html" class="aside-bar-navigation__list-item-link">
+          <span class="aside-bar-navigation__list-item-link-container">
+            <svg
+              class="
+                aside-bar-navigation__list-item-icon
+                aside-bar-navigation__list-item-icon--support
+              "
+              width="22"
+              height="22"
+              viewBox="0 0 22 22"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle
+                class="aside-bar-navigation__list-item-icon-item"
+                cx="11"
+                cy="11"
+                r="8.55556"
+                fill="#686E78"
+              />
+              <path
+                d="M11.0001 6.11111C10.325 6.11111 9.77783 6.65832 9.77783 7.33334C9.77783 8.00835 10.325 8.55556 11.0001 8.55556C11.6751 8.55556 12.2223 8.00835 12.2223 7.33334C12.2223 6.65832 11.6751 6.11111 11.0001 6.11111Z"
+                fill="white"
+              />
+              <path
+                d="M11.0001 9.77778C10.325 9.77778 9.77783 10.325 9.77783 11V14.6667C9.77783 15.3417 10.325 15.8889 11.0001 15.8889C11.6751 15.8889 12.2223 15.3417 12.2223 14.6667V11C12.2223 10.325 11.6751 9.77778 11.0001 9.77778Z"
+                fill="white"
+              />
+            </svg>
+            Поддержка
+          </span>
+        </a>
+      </div>
+    </aside>
+
+    <div class="main-container settings-catalog your-account-page">
+      <header class="header">
+        <a href="/settings.html" class="header__back">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 18 18"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M6.5 14.5L1.70711 9.70711C1.31658 9.31658 1.31658 8.68342 1.70711 8.29289L6.5 3.5C6.77614 3.22386 7.22386 3.22386 7.5 3.5C7.77614 3.77614 7.77614 4.22386 7.5 4.5L4 8H16C16.5523 8 17 8.44772 17 9C17 9.55228 16.5523 10 16 10H4L7.5 13.5C7.77614 13.7761 7.77614 14.2239 7.5 14.5C7.22386 14.7761 6.77614 14.7761 6.5 14.5Z"
+              fill="#212224"
+            />
+          </svg>
+        </a>
+        Ваша учетная запись
+      </header>
+      <nav class="base-box settings-navigation">
+        <h3 class="settings-navigation__title">Настройки</h3>
+        <a href="/notifications-control.html" class="settings-navigation__link">
+          Управление уведомлениями
+        </a>
+        <a href="/tariff-plan-payment.html" class="settings-navigation__link">
+          Тарифный план и оплата
+        </a>
+        <a
+          href="/your-account.html"
+          class="settings-navigation__link settings-navigation__link--active"
+        >
+          Ваша учетная запись
+        </a>
+        <a href="/privacy-policy.html" class="settings-navigation__link">
+          Политика конфиденциальности
+        </a>
+        <a href="/instructions.html" class="settings-navigation__link">
+          Инструкция
+        </a>
+        <a
+          href="/feedback.html"
+          class="
+            settings-navigation__link settings-navigation__link--mobile-only
+          "
+        >
+          Обратная связь
+        </a>
+      </nav>
+      <div class="settings-content your-account">
+        <form class="your-account-form base-box">
+          <h2 class="your-account-form__title">Ваша учетная запись</h2>
+          <div class="your-account-form__info">
+            <div class="base-field your-account-form__info-item">
+              <div class="base-field__label">Ваша эл.почта</div>
+              <div class="base-input">
+                <input
+                  placeholder="example@mail.com"
+                  type="email"
+                  class="base-input__field"
+                />
+              </div>
+            </div>
+            <div class="base-field your-account-form__info-item">
+              <div class="base-field__label">Ваш телефон</div>
+              <div class="base-input">
+                <input
+                  placeholder="+7 ( _ _ _ ) _ _ _ - _ _ - _ _"
+                  type="tel"
+                  class="base-input__field"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="your-account-form__password">
+            <h4 class="your-account-form__password-title">Сменить пароль</h4>
+            <div class="your-account-form__password-fields">
+              <div class="base-field your-account-form__password-fields-item">
+                <div class="base-input">
+                  <input
+                    placeholder="Введите старый пароль"
+                    type="password"
+                    class="base-input__field"
+                  />
+                </div>
+              </div>
+              <div class="base-field your-account-form__password-fields-item">
+                <div class="base-input">
+                  <input
+                    placeholder="Введите старый пароль"
+                    type="password"
+                    class="base-input__field"
+                  />
+                </div>
+              </div>
+              <div class="base-field your-account-form__password-fields-item">
+                <div class="base-input">
+                  <input
+                    placeholder="Введите старый пароль"
+                    type="password"
+                    class="base-input__field"
+                  />
+                </div>
+              </div>
+              <button
+                type="submit"
+                disabled
+                class="
+                  base-button base-button--medium
+                  your-account-form__password-fields-item
+                "
+              >
+                Сохранить изменения
+              </button>
+            </div>
+          </div>
+        </form>
+        <button
+          type="button"
+          class="
+            base-button base-button--textable
+            your-account__btn
+            for-exit-from-account-popup
+          "
+        >
+          Выйти из аккаунта
+        </button>
+      </div>
+      <footer class="settings-footer">
+        <a href="/home.html" class="settings-footer__logo"></a>
+        <small class="settings-footer__description">
+          © Сервис “Кто в сети”, 2021 Все права защищены
+        </small>
+      </footer>
+    </div>
+
+    <script src="./js/script.js"></script>
+  </body>
+</html>

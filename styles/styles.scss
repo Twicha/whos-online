@@ -1,0 +1,1303 @@
+@import "./global";
+
+.popup {
+  padding: 80px 0 80px $aside-bar-width;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  z-index: 110;
+  align-items: flex-start;
+  justify-content: center;
+
+  @include tablet {
+    padding: 90px 33px 0;
+  }
+
+  &--showed {
+    display: flex;
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    border: 1px solid $light-black;
+    z-index: 112;
+
+    &::before,
+    &::after {
+      background: $white;
+    }
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &__backdrop {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba($black, 0.8);
+    cursor: pointer;
+  }
+
+  &-content {
+    width: 100%;
+    max-height: calc(100% - 40px);
+    background: #ffffff;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: auto;
+
+    @include tablet {
+      max-width: calc(100% - 66px);
+    }
+
+    &--default {
+      padding: 30px 40px;
+      max-width: 380px;
+    }
+
+    &--confirm {
+      padding: 40px 29px 50px;
+      max-width: 310px;
+    }
+
+    &__title {
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 20px;
+      color: $black;
+
+      @include tablet {
+        font-size: 24px;
+        line-height: 31px;
+      }
+    }
+
+    &--default &__title {
+      margin-bottom: 14px;
+    }
+
+    &--confirm &__title {
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    &__description {
+      font-size: 13px;
+      line-height: 21px;
+      letter-spacing: 0.02em;
+      color: $darken-gray;
+    }
+
+    &__btn {
+      margin-top: 24px;
+    }
+
+    &__group {
+      margin: 0 auto;
+      width: calc(100% - 22px);
+      display: flex;
+      justify-content: space-between;
+
+      &-btn {
+        width: calc((100% - 10px) / 2);
+      }
+    }
+  }
+}
+
+.start-page {
+  .start-block {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    max-width: 380px;
+
+    @include tablet {
+      padding-top: 46px;
+      max-width: 100%;
+    }
+
+    .create-user__title {
+      text-align: start;
+
+      @include tablet {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.home-page {
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+
+  @include desktop {
+    flex-direction: column-reverse;
+  }
+
+  @include tablet {
+    padding-top: 34px;
+  }
+
+  &__add-user-block {
+    margin-left: 20px;
+    padding-top: 30px;
+    padding-bottom: 40px;
+    width: 380px;
+
+    @include desktop {
+      margin: 0 0 20px;
+      width: 100%;
+      max-width: 460px;
+    }
+
+    @include tablet {
+      padding-top: 0;
+      display: none;
+    }
+  }
+
+  &__container {
+    width: 100%;
+    max-width: 460px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+
+  .activity-feed {
+    margin-top: 20px;
+    padding-top: 30px;
+    padding-bottom: 43px;
+
+    @include tablet {
+      margin-top: 30px;
+      margin-bottom: 20px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 20px;
+      color: $black;
+
+      @include tablet {
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 31px;
+      }
+    }
+
+    &__items {
+      &-link {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0 13px;
+        border-top: 1px solid $gray;
+
+        @include tablet {
+          &:last-child {
+            border-bottom: 1px solid $gray;
+          }
+        }
+
+        &-container {
+          display: flex;
+          align-items: center;
+        }
+
+        &-avatar {
+          margin-right: 12px;
+        }
+
+        &-online {
+          font-weight: bold;
+          font-size: 15px;
+          line-height: 14px;
+          color: $blue;
+        }
+
+        &-date {
+          font-family: "Roboto Slab", serif;
+          font-size: 15px;
+          line-height: 14px;
+          color: $darken-gray;
+        }
+
+        &-time {
+          font-family: "Roboto Slab", serif;
+          font-weight: bold;
+          font-size: 15px;
+          line-height: 14px;
+          color: $black;
+        }
+
+        &-no-users {
+          font-size: 15px;
+          line-height: 14px;
+          color: $darken-gray;
+        }
+      }
+    }
+  }
+
+  &-controls {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__add-btn {
+      width: 100%;
+    }
+
+    &__link {
+      margin: 20px 0 30px;
+      font-size: 13px;
+      line-height: 20px;
+      color: $blue;
+    }
+  }
+}
+
+.accounts-page {
+  &__container {
+    max-width: 860px;
+  }
+
+  @include tablet {
+    &--vk {
+      background: #2787f5;
+    }
+
+    &--instagram {
+      background: #833ab4;
+    }
+
+    &--whats-app {
+      background: #55cd6c;
+    }
+  }
+
+  .users-list {
+    margin-bottom: 20px;
+
+    @include tablet {
+      display: none;
+    }
+  }
+
+  .time-graph {
+    margin: 0 8px;
+
+    @include tablet {
+      margin: 0;
+    }
+
+    &-header {
+      padding: 11px 0 10px;
+      border-radius: 12px 12px 0 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $light-gray;
+
+      @include tablet {
+        padding: 12px 0 11px;
+        background: $white;
+      }
+
+      .slider-btn {
+        display: none;
+
+        @include tablet {
+          @include background-image($size: 6px);
+
+          display: block;
+          min-width: 18px;
+          width: 18px;
+          height: 18px;
+          background-image: url("../images/icons/arrow-right-blue.svg");
+        }
+
+        &-prev {
+          transform: rotate(180deg);
+        }
+
+        &.slick-disabled {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+
+      &__date {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: $black;
+
+        @include tablet {
+          margin: 0 10px;
+        }
+      }
+    }
+
+    &-body {
+      position: relative;
+      overflow: hidden;
+
+      @include tablet {
+        padding: 0 30px 2px;
+        border-radius: 0 0 12px 12px;
+        background: $white;
+
+        &::before {
+          height: 200px;
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: linear-gradient(
+            180deg,
+            #f0f3f7 0%,
+            rgba(255, 255, 255, 0) 100%
+          );
+          z-index: 1;
+        }
+      }
+
+      &__item {
+        padding: 6px 10px;
+        height: 60px;
+        position: relative;
+        z-index: 2;
+
+        &:not(:last-of-type) {
+          border-bottom: 1px solid $dark-gray;
+        }
+
+        &-time {
+          font-family: "Roboto Slab", serif;
+          font-size: 12px;
+          line-height: 16px;
+          color: $darken-gray;
+        }
+      }
+
+      &__lines {
+        &-item {
+          background: $light-black;
+          border-radius: 2px;
+          position: absolute;
+          left: 60px;
+          right: 10px;
+          z-index: 3;
+
+          @include tablet {
+            left: 90px;
+            right: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  .time-info {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    @include tablet {
+      padding-top: 46px;
+    }
+
+    &-user {
+      margin-bottom: 20px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      position: relative;
+
+      @include tablet {
+        margin-bottom: 7px;
+      }
+
+      &__item {
+        display: flex;
+        align-items: center;
+
+        @include tablet {
+          width: 100%;
+          flex-direction: column;
+        }
+
+        &-img {
+          margin-right: 14px;
+          min-width: 52px;
+          width: 52px;
+          height: 52px;
+          position: relative;
+
+          @include tablet {
+            margin: 0 0 14px;
+            min-width: 80px;
+            width: 80px;
+            height: 80px;
+          }
+
+          &-avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            object-fit: cover;
+          }
+
+          &::before {
+            @include background-image($size: contain);
+
+            display: block;
+            content: "";
+            min-width: 26px;
+            width: 26px;
+            height: 26px;
+            position: absolute;
+            top: -5px;
+            right: -5px;
+          }
+
+          @include tablet {
+            &::before {
+              min-width: 40px;
+              width: 40px;
+              height: 40px;
+              top: -10px;
+              right: -10px;
+            }
+          }
+
+          &--vk {
+            &::before {
+              background-image: url("../images/user-avatar-block-social-vk.png");
+
+              @include tablet {
+                background-image: url("../images/user-avatar-block-social-vk-white-bg.png");
+              }
+            }
+          }
+
+          &--instagram {
+            &::before {
+              background-image: url("../images/user-avatar-block-social-instagram.png");
+
+              @include tablet {
+                background-image: url("../images/user-avatar-block-social-instagram-white-bg.png");
+              }
+            }
+          }
+
+          &--whats-app {
+            &::before {
+              background-image: url("../images/user-avatar-block-social-whats-app.png");
+
+              @include tablet {
+                background-image: url("../images/user-avatar-block-social-whats-app-white-bg.png");
+              }
+            }
+          }
+        }
+
+        &-container {
+          @include tablet {
+            padding: 0 36px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+          }
+        }
+
+        &-title {
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 20px;
+          color: $light-black;
+
+          @include tablet {
+            margin-bottom: 7px;
+            color: $white;
+          }
+        }
+
+        &-description {
+          font-size: 13px;
+          line-height: 21px;
+          letter-spacing: 0.02em;
+          color: $dark-gray;
+
+          @include tablet {
+            color: rgba($white, 0.65);
+          }
+        }
+
+        &-link {
+          display: none;
+
+          @include tablet {
+            @include background-image($size: 8px);
+
+            min-width: 34px;
+            width: 34px;
+            height: 34px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 4px;
+            display: block;
+            text-decoration: none;
+            background-image: url("../images/icons/arrow-right-white.svg");
+            position: absolute;
+            top: -7px;
+
+            &--prev {
+              left: 0;
+              transform: rotate(180deg);
+            }
+
+            &--next {
+              right: 0;
+            }
+          }
+        }
+      }
+
+      &__settings {
+        margin-top: 6px;
+        font-size: 13px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: $blue;
+
+        @include tablet {
+          @include background-image($size: contain);
+
+          font-size: 0;
+          position: absolute;
+          top: -25px;
+          right: 0;
+          min-width: 18px;
+          width: 18px;
+          height: 18px;
+          background-image: url("../images/icons/settings-white.svg");
+        }
+      }
+    }
+
+    &__slider {
+      margin: 0 -8px;
+
+      @include tablet {
+        margin: 0;
+        border-radius: 12px;
+
+        &--vk {
+          box-shadow: 0px 10px 25px #1262be;
+        }
+
+        &--instagram {
+          box-shadow: 0px 10px 25px #40135e;
+        }
+
+        &--whats-app {
+          box-shadow: 0px 10px 25px #248236;
+        }
+      }
+
+      &-wrap {
+        position: relative;
+        padding-right: 60px;
+
+        @include tablet {
+          padding-right: 0;
+        }
+      }
+
+      &-controls {
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: flex;
+        flex-direction: column-reverse;
+
+        @include tablet {
+          display: none;
+        }
+
+        .slider-btn {
+          margin-bottom: 10px;
+          min-width: 40px;
+          width: 40px;
+          height: 40px;
+          border: 1px solid $gray;
+          border-radius: 12px;
+          font-size: 0;
+          transition: 0.3s;
+
+          &-next {
+            transform: rotate(180deg);
+          }
+
+          & svg * {
+            transition: 0.3s;
+          }
+
+          &:hover:not(.slick-disabled) {
+            background: #2157b4;
+            border-color: #2157b4;
+
+            & svg * {
+              fill: $white;
+            }
+          }
+
+          &.slick-disabled {
+            cursor: not-allowed;
+            border: 1px solid $light-gray;
+
+            & svg * {
+              fill: $gray;
+            }
+          }
+        }
+      }
+    }
+
+    &__bottom-slider-controls {
+      margin-top: 30px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+
+      @include tablet {
+        display: flex;
+      }
+
+      &-date {
+        margin: 0 30px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: $white;
+      }
+
+      .slider-btn {
+        display: none;
+
+        @include tablet {
+          @include background-image($size: 6px);
+
+          display: block;
+          min-width: 18px;
+          width: 18px;
+          height: 18px;
+          background-image: url("../images/icons/arrow-right-white.svg");
+        }
+
+        &-prev {
+          transform: rotate(180deg);
+        }
+
+        &.slick-disabled {
+          opacity: 0;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
+.services-page {
+  &__description {
+    margin: 30px 0 0 40px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: $dark-gray;
+
+    @include tablet {
+      margin: 34px 0 0 33px;
+    }
+  }
+}
+
+.account-settings-page {
+  .account-settings {
+    max-width: 380px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+
+    @include tablet {
+      padding-top: 0;
+      max-width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 14px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 20px;
+      color: $black;
+      display: flex;
+      align-items: center;
+
+      &-back {
+        margin-right: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &__avatar {
+      display: none;
+
+      @include tablet {
+        margin: 30px auto 20px;
+        min-width: 80px;
+        width: 80px;
+        height: 80px;
+        display: block;
+        border-radius: 100%;
+        position: relative;
+
+        &-img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          border-radius: 100%;
+        }
+
+        &::before {
+          @include background-image($size: contain);
+
+          display: block;
+          content: "";
+          min-width: 40px;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: -10px;
+          right: -10px;
+        }
+
+        &--vk {
+          &::before {
+            background-image: url("../images/account-settings-social-vk.png");
+          }
+        }
+
+        &--instagram {
+          &::before {
+            background-image: url("../images/account-settings-social-instagram.png");
+          }
+        }
+
+        &--whats-app {
+          &::before {
+            background-image: url("../images/account-settings-social-whats-app.png");
+          }
+        }
+      }
+    }
+
+    &__back {
+      margin-right: 25px;
+      display: block;
+    }
+
+    &__form {
+      &-item {
+        margin-bottom: 10px;
+      }
+
+      &-sort {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &-description {
+          margin-right: 10px;
+          width: 100px;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 18px;
+          text-align: right;
+          letter-spacing: 0.02em;
+          color: $darken-gray;
+        }
+      }
+
+      &-btn {
+        width: 100%;
+      }
+
+      &-delete-btn {
+        margin: 20px auto 0;
+      }
+    }
+  }
+}
+
+.add-account-page {
+  .add-account {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    max-width: 380px;
+
+    @include tablet {
+      max-width: 100%;
+    }
+  }
+}
+
+.settings-page {
+  justify-content: space-between;
+
+  .settings-navigation,
+  .settings-footer {
+    @include tablet {
+      display: flex;
+    }
+  }
+}
+
+.instructions-page {
+  .instructions {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    height: 550px;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 20px;
+    color: $dark-gray;
+
+    @include tablet {
+      height: auto;
+    }
+  }
+}
+
+.privacy-policy-page {
+  .privacy-policy {
+    padding: 27px 40px;
+
+    @include tablet {
+      padding: 30px 33px;
+    }
+
+    &__title {
+      margin-bottom: 24px;
+      max-width: 300px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 31px;
+      color: $black;
+    }
+
+    &__link {
+      max-width: 300px;
+    }
+  }
+}
+
+.notifications-control-page {
+  .notifications-control {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 20px;
+      color: $black;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-switchers {
+      margin-bottom: 37px;
+      width: 100%;
+
+      @include tablet {
+        margin-bottom: 30px;
+      }
+
+      &__header {
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-item {
+          font-size: 13px;
+          line-height: 21px;
+          color: $dark-gray;
+        }
+      }
+
+      &__item {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        &:not(:last-child) {
+          margin-bottom: 20px;
+        }
+
+        &-label {
+          margin-right: 10px;
+          font-weight: 500;
+          font-size: 13px;
+          line-height: 21px;
+          color: $black;
+        }
+
+        &-switcher {
+          margin-top: 5px;
+        }
+      }
+    }
+
+    &__btn {
+      width: 220px;
+      align-self: flex-end;
+
+      @include tablet {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.tariff-plan-payment-page {
+  .tariff-plan-payment {
+    padding-top: 30px;
+    padding-bottom: 113px;
+
+    &__item {
+      &:not(:last-child) {
+        margin-bottom: 40px;
+
+        @include tablet {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 20px;
+      color: $black;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-cards {
+      display: flex;
+      justify-content: space-between;
+
+      @include mobile {
+        flex-direction: column;
+      }
+
+      &__item {
+        padding: 30px;
+        width: calc((100% - 20px) / 2);
+        border: 1px solid $gray;
+        border-radius: 12px;
+        position: relative;
+        text-align: start;
+
+        @include mobile {
+          width: 100%;
+          text-align: center;
+
+          &:not(:last-child) {
+            margin-bottom: 20px;
+          }
+        }
+
+        &-info {
+          @include background-image($size: contain);
+
+          min-width: 18px;
+          width: 18px;
+          height: 18px;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background-image: url("../images/icons/info-gray.svg");
+        }
+
+        &-title {
+          margin-bottom: 4px;
+          font-size: 15px;
+          line-height: 20px;
+          color: $darken-gray;
+        }
+
+        &-description {
+          font-family: "Roboto Slab", serif;
+          font-weight: 500;
+          font-size: 24px;
+          line-height: 31px;
+          color: $black;
+        }
+      }
+    }
+
+    &-info {
+      @include tablet {
+        padding: 33px 40px 50px;
+        background: $white;
+        border-radius: 12px;
+      }
+
+      &__title {
+        margin-bottom: 14px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 31px;
+        color: $black;
+      }
+
+      &__description {
+        font-size: 13px;
+        line-height: 21px;
+        letter-spacing: 0.02em;
+        color: $darken-gray;
+      }
+
+      &__settings {
+        margin-top: 24px;
+
+        &-radio {
+          display: flex;
+          flex-direction: column;
+
+          &-item {
+            &:not(:last-child) {
+              margin-bottom: 12px;
+            }
+          }
+        }
+
+        &-btn {
+          margin-top: 24px;
+          max-width: 230px;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.your-account-page {
+  .your-account {
+    display: flex;
+    flex-direction: column;
+
+    &-form {
+      padding-top: 30px;
+      padding-bottom: 31px;
+
+      @include tablet {
+        padding-bottom: 0;
+      }
+
+      &__title {
+        margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 18px;
+        line-height: 20px;
+        color: $black;
+
+        @include tablet {
+          display: none;
+        }
+      }
+
+      &__info {
+        margin-bottom: 40px;
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet {
+          flex-direction: column;
+          margin-bottom: 46px;
+        }
+
+        &-item {
+          width: calc((100% - 20px) / 2);
+
+          @include tablet {
+            width: 100%;
+
+            &:not(:last-child) {
+              margin-bottom: 21px;
+            }
+          }
+        }
+      }
+
+      &__password {
+        &-title {
+          margin-bottom: 14px;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 20px;
+          color: $black;
+        }
+
+        &-fields {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+
+          @include tablet {
+            flex-direction: column;
+          }
+
+          &-item {
+            margin-bottom: 20px;
+            width: calc((100% - 20px) / 2);
+
+            @include tablet {
+              margin: 0;
+              width: 100%;
+
+              &:not(:last-child) {
+                margin-bottom: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &__btn {
+      margin: 24px 40px 0 0;
+      align-self: flex-end;
+      font-weight: 500;
+
+      @include tablet {
+        margin: 24px 0 30px;
+        align-self: center;
+      }
+    }
+  }
+}
+
+.feedback-page {
+  .feedback {
+    padding-top: 30px;
+    padding-bottom: 50px;
+    width: 540px;
+
+    @include laptop {
+      width: 100%;
+    }
+
+    &__title {
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 20px;
+      color: $black;
+
+      @include tablet {
+        display: none;
+      }
+    }
+
+    &-form {
+      display: flex;
+      flex-direction: column;
+
+      &__group {
+        margin-bottom: 24px;
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+          margin-bottom: 0;
+          flex-direction: column;
+        }
+      }
+
+      &__field {
+        width: calc((100% - 20px) / 2);
+
+        @include tablet {
+          margin-bottom: 14px;
+        }
+
+        @include mobile {
+          width: 100%;
+        }
+
+        &--textarea {
+          width: 100%;
+
+          @include tablet {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      &__btn {
+        margin-top: 24px;
+        width: 220px;
+        align-self: flex-end;
+
+        @include mobile {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
