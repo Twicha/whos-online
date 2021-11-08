@@ -1621,10 +1621,17 @@ a {
   margin-bottom: 10px;
 }
 
+.settings-catalog .settings-navigation__link:hover {
+  color: #ffffff;
+  background: #2157b4;
+  border-color: #2157b4;
+}
+
 .settings-catalog .settings-navigation__link--active {
-  background: #f0f0f4;
-  color: #a1a8b4;
-  border-color: #f0f0f4;
+  background: #f0f0f4 !important;
+  color: #a1a8b4 !important;
+  border-color: #f0f0f4 !important;
+  pointer-events: none;
 }
 
 .settings-catalog .settings-navigation__link--mobile-only {

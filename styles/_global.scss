@@ -1248,10 +1248,17 @@ a {
         margin-bottom: 10px;
       }
 
+      &:hover {
+        color: #ffffff;
+        background: #2157b4;
+        border-color: #2157b4;
+      }
+
       &--active {
-        background: $light-gray;
-        color: $dark-gray;
-        border-color: $light-gray;
+        background: $light-gray !important;
+        color: $dark-gray !important;
+        border-color: $light-gray !important;
+        pointer-events: none;
       }
 
       &--mobile-only {
